@@ -5,7 +5,11 @@ describe Game do
 
   context 'when instantiated' do
     it 'can hold moves' do
-      expect(game.player_moves).to be_an(Array)
+      expect(game.moves).to be_an(Array)
+    end
+
+    it 'no moves have been made' do
+      expect(game.moves).to be_empty
     end
   end
 end
