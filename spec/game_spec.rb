@@ -18,9 +18,11 @@ describe Game do
     end
   end
 
-  context 'player makes a move' do
-    it 'adds to .move' do
-      expect{ game.player_move(first_move) }.to change{ game.moves.size }.by(1)
+  describe '#player_move' do
+    context 'player makes a move' do
+      it 'adds to .move' do
+        expect{ game.player_move(first_move) }.to change{ game.moves.size }.by(1)
+      end
     end
   end
 end
