@@ -1,8 +1,8 @@
 class Game
   attr_reader :moves
 
-  def initialize
-    @moves =[]
+  def initialize(moves_set = [])
+    @moves = moves_set
 
     #Winning combinations
     w1 = Set.new [1,2,3]
@@ -18,6 +18,8 @@ class Game
   end
 
   def player_move(num)
+    message = "Draw"
     @moves.push(num)
+    raise message if @moves.size == 5
   end
 end
