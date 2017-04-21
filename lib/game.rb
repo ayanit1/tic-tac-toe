@@ -37,4 +37,5 @@ class Game
   def set_moves
     Set.new(@moves)
   end
+
 end
