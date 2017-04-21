@@ -22,7 +22,9 @@ describe Game do
       it 'adds to .move' do
         expect{ game.player_move(1) }.to change{ game.moves.size }.by(1)
       end
+    end
 
+    context 'game can be drawn' do
       it 'raises draw message if more than 5 moves exceeded' do
         draw_game = Game.new
         draw_game.player_move(1)
@@ -31,8 +33,6 @@ describe Game do
         draw_game.player_move(8)
         expect{ draw_game.player_move(6) }.to raise_error("Draw")
       end
-
-
     end
   end
 end
